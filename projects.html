@@ -1,0 +1,153 @@
+<html> 
+
+<head> 
+
+<title> projects </title>
+
+<style> 
+
+/* 🔹 Style the Projects Section */
+#projects {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* 🔹 Grid Layout for Projects (Responsive) */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* 🔹 Project Card Styling */
+.project-card {
+  width: 90%;
+  max-width: 350px;
+  background: linear-gradient(135deg, #222, #333);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🔹 Image Styling */
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* 🔹 Hover Effects (Animation) */
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(255, 105, 180, 0.3);
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* 🔹 Button Styling */
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #ff6600;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project-card a:hover {
+  background: #ff4500;
+  transform: translateY(-3px);
+}
+
+
+.btn-custom {
+            text-decoration: none;
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: 0.3s;
+            border: 2px solid cyan;
+            color: cyan;
+            background: transparent;
+        }
+
+        .btn-custom:hover {
+            background: cyan;
+            color: #24243e;
+            box-shadow: 0 0 15px cyan;
+        }
+
+/* 🔹 Mobile Responsiveness */
+@media (max-width: 600px) {
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+  .project-card {
+    width: 100%;
+  }
+} 
+
+
+</style>
+
+</head>
+
+<section id="projects">
+  <a href="myportfolio.html" class="btn btn-custom ms-3">Back to Home</a>
+    <h2>My Projects</h2>
+    <!-- Web Development Projects -->
+    <h3>Web Development</h3>
+    <div class="project-container">
+      <div class="project-card">
+        <img src="C:\aiwebsite\kidswebsite.jpg" alt="Kids Learning Website">
+        <h4>Kids Learning Website</h4>
+        <p>A fun and interactive website for kids to learn.</p>
+        <a href="file:///C:/mathcodemaster/mathcodemaster.html" target="_blank">Live Demo</a>
+        <a href="https://github.com/yourrepo" target="_blank">GitHub Code</a>
+      </div>
+  
+      <div class="project-card">
+        <img src="C:\aiwebsite\aiwebsite.jpg" alt="AI Website">
+        <h4>AI Website</h4>
+        <p>Website showcasing AI tools and automation.</p>
+        <a href="file:///C:/aiwebsite/aiwebsite.html" target="_blank">Live Demo</a>
+        <a href="https://github.com/yourrepo" target="_blank">GitHub Code</a>
+      </div>
+    </div>
+  
+    <!-- C++ Projects -->
+    <h3>C++ Programming</h3>
+    <div class="project-container">
+      <div class="project-card">
+        <h4>ATM Function (C++)</h4>
+        <p>Simulates an ATM machine with transactions.</p>
+        <a href="https://github.com/yourrepo" target="_blank">GitHub Code</a>
+      </div>
+  
+      <div class="project-card">
+        <h4>SIP Calculator (C++)</h4>
+        <p>Calculates SIP returns based on monthly investment.</p>
+        <a href="https://github.com/yourrepo" target="_blank">GitHub Code</a>
+      </div>
+  
+      <div class="project-card">
+        <h4>SSY Calculator (C++)</h4>
+        <p>Calculates maturity amount for Sukanya Samriddhi Yojana.</p>
+        <a href="https://github.com/yourrepo" target="_blank">GitHub Code</a>
+      </div>
+    </div>
+  </section>
+  
+</body> 
+  </html> 

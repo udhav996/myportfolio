@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="myportfolio.css">
+
+    
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+    <div class="logo animated-logo">
+        <span class="color-1">M</span><span class="color-2">Y</span> 
+        <span class="color-3">P</span><span class="color-4">O</span><span class="color-1">R</span><span class="color-2">T</span><span class="color-3">F</span><span class="color-4">O</span><span class="color-1">L</span><span class="color-2">I</span><span class="color-3">O</span>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+        ☰
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+              <span class="typed-text"></span><span class="cursor">|</span>
+            </h1>
+            <p>Web Developer | Python Programmer | Freelancer</p>
+            <div class="buttons">
+              <a href="contact.html" class="btn-pulse">Let's Talk</a>
+              <a href="projects.html" class="btn-gradient">See My Work</a>
+            </div>
+          </div>
+
+
+        <div class="hero-image-container">
+            <div class="highlight-circle"></div>
+            <img src="my_image6.png" alt="Udhav Salunke" class="hero-image">
+        </div>
+        
+
+    </section>
+
+    
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Left Section (Quick Links) -->
+        <div class="footer-left">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Center Section (Logo & Social Media) -->
+        <div class="footer-center">
+            <h2 class="footer-logo">UDHAV SALUNKE</h2>
+            <p class="footer-text">Creating amazing experiences with code & design.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/yourprofile" class="social-icon facebook">
+                    <img src="facebook_logo.png" alt="Facebook" width="30">
+                </a>
+                <a href="https://twitter.com/yourprofile" class="social-icon twitter">
+                    <img src="twitter_logo.png" alt="Twitter" width="30" id="twitter">
+                </a>
+                <a href="https://www.instagram.com/learnwithudhav?igsh=dWJiaXdxZHcxN2gy" class="social-icon instagram">
+                    <img src="instagram-icon.png" alt="Instagram" width="30">
+                </a>
+                <a href="https://www.linkedin.com/in/udhav-salunke-7a0392207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon linkedin">
+                    <img src="linkdin.png" alt="LinkedIn" width="30">
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Section (Contact Info) -->
+        <div class="footer-right">
+            <h3>Contact</h3>
+            <p>Email: usudhav@gmail.com</p>
+            <p>Location: India</p>
+        </div>
+    </div>
+    <div class="footer-bottom">© 2025 Udhav Salunke. All rights reserved.</div>
+</footer> 
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+</script>
+
+    <script src="myportfolio.js"> </script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    
+</body>
+</html> 

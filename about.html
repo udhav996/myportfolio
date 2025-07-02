@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About | Udhav Salunke</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      background: #0b0b1e;
+      color: #e0e0f0;
+      font-family: Poppins, sans-serif;
+      scroll-behavior: smooth;
+    }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 {
+      background: linear-gradient(90deg, #00ffe7, #ff00e2);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+    section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; }
+    .container { display: grid; gap: 30px; }
+
+    .hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0 5%;
+  background: #0b0b1e;
+}
+.hero-bg { position: absolute; inset: 0; z-index:1; }
+.animate-bg path { stroke: rgba(0,255,231,0.2); stroke-width:2; animation: wave 6s infinite; }
+
+@keyframes wave {
+  0%,100% { d: path("M0 200 Q400 100 800 200 V400 H0 Z"); }
+  50% { d: path("M0 200 Q400 300 800 200 V400 H0 Z"); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+}
+.hero-content h1 { font-size: 3rem; margin:0; }
+.hero-content .typed-text { color: #ccc; font-size:1.2rem; margin:10px 0; min-height:1.5em; }
+
+
+.cta-group {
+  margin-top: 30px; /* 👈 Increase this value to push it further down */
+}
+
+.cta-group a.btn-primary {
+  background: linear-gradient(135deg, #00ffe7, #8a2be2);
+  color: #0b0b1e;
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+
+.cta-group a.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 70%);
+  transform: rotate(45deg);
+  animation: shine 2s infinite linear;
+}
+
+.cta-group a.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+  color: white;
+}
+
+@keyframes shine {
+  0% { transform: rotate(45deg) translateX(-100%); }
+  100% { transform: rotate(45deg) translateX(100%); }
+}
+
+.hero-image {
+  position: relative;
+  z-index: 2;
+  width: 300px;
+  height: 400px;
+  overflow: visible;
+}
+.hero-image img {
+  width: 100%; border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,255,231,0.3);
+  transform: translateY(0);
+  animation: floatImg 6s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+
+    
+
+    /* Skills */
+    .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .skill {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+    .skill:hover { transform: translateY(-5px); box-shadow: 0 0 10px #00ffe7; }
+    .skill h4 { color: #00ffe7; margin-bottom: 8px; }
+
+    /* Timeline */
+    .timeline { position: relative; padding-left: 30px; border-left: 3px solid #00ffe7; }
+    .timeline-entry { margin-bottom: 40px; position: relative; opacity: 0; transform: translateY(50px); transition: 0.6s ease-in-out; }
+    .timeline-entry.show { opacity: 1; transform: translateY(0); }
+    .timeline-entry::before {
+      content: ''; position: absolute; left: -10px; width: 20px; height: 20px;
+      background: #00ffe7; border-radius: 50%;
+    }
+    .timeline-entry h4 { margin: 0 0 5px; }
+    .timeline-entry p { margin: 0; color: #ccc; }
+
+    /* Avatar Section */
+    .avatar-section { text-align: center; padding: 50px 0; }
+    .avatar-section img { width: 140px; height: 140px; border-radius: 50%; box-shadow: 0 0 20px cyan; }
+
+    /* Project Strip */
+    .project-strip { display: flex; overflow-x: auto; gap: 20px; padding: 20px 0; }
+    .project-box {
+      min-width: 200px; background: rgba(255,255,255,0.05); padding: 20px;
+      border-radius: 10px; flex-shrink: 0;
+    }
+
+
+    .carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: max-content;
+}
+
+.carousel-item {
+  min-width: 100%;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  flex-shrink: 0;
+}
+.carousel-item p {
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.carousel-item h5 {
+  color: #00ffe7;
+  margin: 0;
+}
+
+
+.btn-custom {
+            
+            text-decoration: none;
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: 0.3s;
+            border: 2px solid cyan;
+            color: cyan;
+            background: transparent;
+        }
+
+        .btn-custom:hover {
+            background: cyan;
+            color: #24243e;
+            box-shadow: 0 0 15px cyan;
+        }
+
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero::after { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+   
+  
+  <section class="hero">
+    <div class="hero-bg">
+      <svg class="animate-bg" viewBox="0 0 800 400"><path d="M0 200 Q400 100 800 200 V400 H0 Z" fill="none"/></svg>
+    </div>
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="highlight">Udhav Salunke</span></h1>
+      <p class="typed-text"></p>
+      <div class="cta-group">
+        <a href="resume.pdf" download class="btn-primary">Download Resume</a>
+        <a href="#projects" class="btn-primary outline">My Work</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="hackathon_image.png-Photoroom.png" alt="Udhav Salunke">
+    </div>
+  </section>
+
+  <section>
+    <h2 data-aos="fade-up">Skills & Tech Stack</h2>
+    <div class="skills">
+      <div class="skill" data-aos="zoom-in"><h4>Frontend</h4><p>HTML5, CSS3, JavaScript, Bootstrap, Tailwind CSS</p></div>
+      <div class="skill" data-aos="zoom-in"><h4>Backend</h4><p>Python (Flask), REST APIs, SQL (MySQL)</p></div>
+      <div class="skill" data-aos="zoom-in"><h4>Programming</h4><p>C, C++, Python, JavaScript</p></div>
+      <div class="skill" data-aos="zoom-in"><h4>Tools</h4><p>Git, GitHub, VS Code, Canva, Chatgpt</p></div>
+      <div class="skill" data-aos="zoom-in"><h4>Finance</h4><p>SIP, SSY, Loan calculators & automation tools</p></div>
+      <div class="skill" data-aos="zoom-in"><h4>Design & UI</h4><p>Glassmorphism, Neon effects, Animated interfaces</p></div>
+    </div>
+  </section>
+
+  <section class="avatar-section" data-aos="zoom-in">
+    <img src="cartoon_face2.png" alt="Cartoon Emoji">
+    <p style="margin-top: 10px;">Yes, that's me in cartoon form 😄</p>
+  </section>
+
+  <section>
+    <h2 data-aos="fade-up">My Journey</h2>
+    <div class="timeline">
+      <div class="timeline-entry" data-aos="fade-up"><h4>🔰 Learning C & C++</h4><p>Started programming basics and data structures</p></div>
+      <div class="timeline-entry" data-aos="fade-up"><h4>🌐 Mastered HTML, CSS, JavaScript</h4><p>Created responsive web pages and modern UIs</p></div>
+      <div class="timeline-entry" data-aos="fade-up"><h4>🗄️ SQL Fundamentals</h4><p>Built and queried databases using MySQL</p></div>
+      <div class="timeline-entry" data-aos="fade-up"><h4>🐍 Explored Python</h4><p>Developed finance tools and automation logic</p></div>
+      <div class="timeline-entry" data-aos="fade-up"><h4>🚀 Project Building</h4><p>Integrated all technologies to build full-fledged tools</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-aos="fade-up">Featured Projects</h2>
+    <div class="project-strip">
+      <div class="project-box" data-aos="fade-right">Smart SIP Calculator</div>
+      <div class="project-box" data-aos="fade-right">AI Learning Platform</div>
+      <div class="project-box" data-aos="fade-right">Kids Math Web App</div>
+      <div class="project-box" data-aos="fade-right">Glassmorphism Portfolio</div>
+    </div>
+  </section>
+
+
+  <section>
+    <h2>Testimonials</h2>
+    <div class="carousel-wrapper" data-aos="fade-up">
+      <div class="carousel-track" id="testimonialTrack">
+        <div class="carousel-item">
+          <p>“Udhav's tools are not just smart—they’re super user-friendly. His calculators helped me automate my financial workflow.”</p>
+          <h5>— Finance User</h5>
+        </div>
+        <div class="carousel-item">
+          <p>“His animated UI and logic-driven layouts are very impressive. My portfolio now looks sharp and interactive.”</p>
+          <h5>— UI/UX Client</h5>
+        </div>
+        <div class="carousel-item">
+          <p>“From design to logic, Udhav delivers on both. He’s helped me learn and build my first web app smoothly.”</p>
+          <h5>— Student Developer</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div style="text-align: center;">
+  <a href="myportfolio.html" class="btn btn-custom ms-3">Back to Home</a>
+  </div>
+  <script>
+    const track = document.getElementById("testimonialTrack");
+    const items = document.querySelectorAll(".carousel-item");
+    let index = 0;
+  
+    function moveCarousel() {
+      index = (index + 1) % items.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+  
+    let autoScroll = setInterval(moveCarousel, 3000); // change every 3s
+  
+    // Pause on hover
+    track.addEventListener("mouseenter", () => clearInterval(autoScroll));
+    track.addEventListener("mouseleave", () => {
+      autoScroll = setInterval(moveCarousel, 3000);
+    });
+
+
+
+    const textEl = document.querySelector('.typed-text');
+const text = 'I build web & finance tools with C++, Python & AI. Let’s build something impactful.';
+let idx = 0;
+function type() {
+  if(idx < text.length) {
+    textEl.textContent += text[idx++];
+    setTimeout(type, 50);
+  }
+}
+type();
+
+  </script>
+  
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+</body>
+</html>
