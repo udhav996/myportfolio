@@ -212,6 +212,81 @@
     @media (max-width: 768px) {
       .hero::after { font-size: 3rem; }
     }
+
+
+    /* Adjust buttons in mobile */
+@media (max-width: 768px) {
+  .cta-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Center buttons horizontally */
+    gap: 12px;
+  }
+
+  .cta-group a.btn-primary {
+    width: auto;           /* Let it size based on content */
+    min-width: 180px;      /* Optional: minimum size */
+    padding: 10px 20px;
+    text-align: center;
+  }
+}
+
+  /* Fix hero image stacking */
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 30px;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-image {
+    width: 70%;
+    height: auto;
+  }
+
+  /* Fix carousel text wrapping issue */
+  .carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  text-align: center;
+}
+
+.carousel-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  padding: 0 10px;
+}
+
+
+
   </style>
 </head>
 <body>
@@ -237,7 +312,7 @@
   <section>
     <h2 data-aos="fade-up">Skills & Tech Stack</h2>
     <div class="skills">
-      <div class="skill" data-aos="zoom-in"><h4>Frontend</h4><p>HTML5, CSS3, JavaScript, Bootstrap, Tailwind CSS</p></div>
+      <div class="skill" data-aos="zoom-in"><h4>Frontend</h4><p>HTML, CSS, JavaScript, Bootstrap</p></div>
       <div class="skill" data-aos="zoom-in"><h4>Backend</h4><p>Python (Flask), REST APIs, SQL (MySQL)</p></div>
       <div class="skill" data-aos="zoom-in"><h4>Programming</h4><p>C, C++, Python, JavaScript</p></div>
       <div class="skill" data-aos="zoom-in"><h4>Tools</h4><p>Git, GitHub, VS Code, Canva, Chatgpt</p></div>
