@@ -114,6 +114,34 @@
   setInterval(randomFlip, 1500);
 </script>
 
+<script>
+  // Get all social icons
+  const icons = document.querySelectorAll('.social-icon');
+
+  icons.forEach(icon => {
+    icon.addEventListener('touchstart', () => {
+      icon.classList.add('active-zoom');
+
+      setTimeout(() => {
+        icon.classList.remove('active-zoom');
+      }, 150); // Zoom lasts 150ms
+    });
+
+    // Optional: support click for desktop too
+    icon.addEventListener('mousedown', () => {
+      icon.classList.add('active-zoom');
+      setTimeout(() => {
+        icon.classList.remove('active-zoom');
+      }, 150);
+    });
+  });
+</script>
+
+
+
+
+  
+
 
 </body>
 </html>
