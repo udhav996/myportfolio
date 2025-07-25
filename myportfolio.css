@@ -428,14 +428,6 @@ p {
 }
 
 
-.social-icon {
-  transition: transform 0.15s ease;
-}
-
-.zoom-on-tap {
-  transform: scale(1.2);
-}
-
 
 .social-icon img {
     width: 50px;
