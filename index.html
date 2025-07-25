@@ -113,6 +113,22 @@
   // Flip random character every 1.5 seconds
   setInterval(randomFlip, 1500);
 </script>
+
+  <script>
+  const socialIcons = document.querySelectorAll('.social-icon');
+
+  socialIcons.forEach(icon => {
+    icon.addEventListener('touchstart', () => {
+      icon.classList.add('zoom-on-tap');
+
+      // Remove the zoom class very quickly after touch
+      setTimeout(() => {
+        icon.classList.remove('zoom-on-tap');
+      }, 120);
+    }, { passive: true }); // improves mobile performance
+  });
+</script>
+
  
 </body>
 </html>
