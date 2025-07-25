@@ -427,6 +427,9 @@ p {
   box-shadow: 0 0 12px cyan;
 }
 
+.social-icon {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 
 .social-icon img {
