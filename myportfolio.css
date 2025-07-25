@@ -421,10 +421,12 @@ p {
 }
 
 /* Hover Effect for Social Icons */
-.social-icon:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 15px cyan;
+.social-icon:hover,
+.social-icon:active {
+  transform: scale(1.2);
+  box-shadow: 0 0 12px cyan;
 }
+
 
 
 .social-icon img {
