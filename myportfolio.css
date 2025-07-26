@@ -415,18 +415,43 @@ p {
 
 #twitter{
 
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
 
 }
 
-/* Hover Effect for Social Icons */
-.social-icon:hover,
-.social-icon:active {
-  transform: scale(1.2);
-  box-shadow: 0 0 12px cyan;
+/* Default appearance */
+.icon-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
+/* HOVER Zoom — Desktop Only */
+@media (hover: hover) and (pointer: fine) {
+  .icon-img:hover {
+    transform: scale(1.2);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .social-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px cyan;
+}
+}
+
+/* TAP Zoom — Mobile Only (triggered by JS) */
+.icon-img.tap-zoom {
+  animation: tapZoom 0.3s ease;
+}
+
+@keyframes tapZoom {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
 
 
 .social-icon img {
@@ -445,9 +470,7 @@ p {
 
 }
 
-.social-icon img:hover {
-  transform: scale(1.2);
-}
+
 
 .footer-bottom {
   text-align: center;
@@ -594,3 +617,4 @@ p {
   vertical-align: middle;
   margin-left: 6px;
 }
+
