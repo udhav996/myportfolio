@@ -51,20 +51,34 @@
       transform: scale(1.1);
     }
 
-    /* 🔹 Button Styling */
+    /* 🔹 Button Base Style */
     .project-card a {
       display: inline-block;
-      margin-top: 10px;
-      padding: 8px 12px;
-      background: #ff6600;
-      color: white;
+      margin: 8px 5px;
+      padding: 8px 14px;
       border-radius: 5px;
       text-decoration: none;
+      font-weight: bold;
       transition: background 0.3s ease, transform 0.2s ease;
     }
 
-    .project-card a:hover {
-      background: #ff4500;
+    /* 🔵 GitHub Button */
+    .btn-github {
+      background: #0366d6;
+      color: white;
+    }
+    .btn-github:hover {
+      background: #024c9a;
+      transform: translateY(-3px);
+    }
+
+    /* 🔴 Live Demo Button */
+    .btn-demo {
+      background: #e63946;
+      color: white;
+    }
+    .btn-demo:hover {
+      background: #b71c1c;
       transform: translateY(-3px);
     }
 
@@ -147,16 +161,16 @@
         <img src="kids_website.jpg" alt="Kids Learning Website">
         <h4>Kids Learning Website</h4>
         <p>A fun and interactive website for kids to learn.</p>
-        <a href="https://udhav996.github.io/kids_learning_website/" target="_blank">Live Demo</a>
-        <a href="https://github.com/udhav996/kids_learning_website" target="_blank">GitHub Code</a>
+        <a href="https://udhav996.github.io/kids_learning_website/" target="_blank" class="btn-demo">Live Demo</a>
+        <a href="https://github.com/udhav996/kids_learning_website" target="_blank" class="btn-github">GitHub Code</a>
       </div>
 
       <div class="project-card">
         <img src="AI_website.jpg" alt="AI Website">
         <h4>AI Website</h4>
         <p>Website showcasing AI tools and automation.</p>
-        <a href="https://udhav996.github.io/Ai_website-/" target="_blank">Live Demo</a>
-        <a href="https://github.com/udhav996/Ai_website-" target="_blank">GitHub Code</a>
+        <a href="https://udhav996.github.io/Ai_website-/" target="_blank" class="btn-demo">Live Demo</a>
+        <a href="https://github.com/udhav996/Ai_website-" target="_blank" class="btn-github">GitHub Code</a>
       </div>
 
       <!-- ✅ Resume Generator with NEW Badge -->
@@ -165,24 +179,24 @@
         <img src="resume_image.jpg" alt="Resume Generator">
         <h4>Resume Generator</h4>
         <p>A tool to create professional resumes instantly.</p>
-        <a href="https://udhav996.github.io/Resume_Generator/" target="_blank">Live Demo</a>
-        <a href="https://github.com/udhav996/Resume_Generator" target="_blank">GitHub Code</a>
+        <a href="https://udhav996.github.io/Resume_Generator/" target="_blank" class="btn-demo">Live Demo</a>
+        <a href="https://github.com/udhav996/Resume_Generator" target="_blank" class="btn-github">GitHub Code</a>
       </div>
 
       <div class="project-card">
         <img src="sir_and_my_image.jpg" alt="Birthday Wish">
         <h4>Birthday Wish Project</h4>
         <p>A creative birthday wish website made for my teacher.</p>
-        <a href="https://udhav996.github.io/birthday_wish/" target="_blank">Live Demo</a>
-        <a href="https://github.com/udhav996/birthday_wish" target="_blank">GitHub Code</a>
+        <a href="https://udhav996.github.io/birthday_wish/" target="_blank" class="btn-demo">Live Demo</a>
+        <a href="https://github.com/udhav996/birthday_wish" target="_blank" class="btn-github">GitHub Code</a>
       </div>
 
       <div class="project-card">
         <img src="girl1.jpg" alt="Landing Page">
         <h4>Landing Page For Tution Class</h4>
         <p>A modern and responsive landing page design.</p>
-        <a href="https://udhav996.github.io/landing_page/" target="_blank">Live Demo</a>
-        <a href="https://github.com/udhav996/landing_page" target="_blank">GitHub Code</a>
+        <a href="https://udhav996.github.io/landing_page/" target="_blank" class="btn-demo">Live Demo</a>
+        <a href="https://github.com/udhav996/landing_page" target="_blank" class="btn-github">GitHub Code</a>
       </div>
     </div>
 
@@ -192,25 +206,55 @@
       <div class="project-card">
         <h4>ATM Function (C++)</h4>
         <p>Simulates an ATM machine with transactions.</p>
-        <a href="https://github.com/yourrepo" target="_blank">GitHub Code</a>
+        <a href="https://github.com/yourrepo" target="_blank" class="btn-github">GitHub Code</a>
       </div>
 
       <div class="project-card">
         <h4>SIP Calculator (C++)</h4>
         <p>Calculates SIP returns based on monthly investment.</p>
-        <a href="https://github.com/yourrepo" target="_blank">GitHub Code</a>
+        <a href="https://github.com/yourrepo" target="_blank" class="btn-github">GitHub Code</a>
       </div>
 
       <div class="project-card">
         <h4>SSY Calculator (C++)</h4>
         <p>Calculates maturity amount for Sukanya Samriddhi Yojana.</p>
-        <a href="https://github.com/yourrepo" target="_blank">GitHub Code</a>
+        <a href="https://github.com/yourrepo" target="_blank" class="btn-github">GitHub Code</a>
       </div>
     </div>
+
+       <!-- 🐍 Python Projects -->
+    <h3>Python Projects</h3>
+    <div class="project-container">
+      <div class="project-card">
+        <span class="badge-new">NEW 🔥</span>
+        <img src="Computer_Copilot.jpg" alt="Computer Copilot">
+        <h4>Computer Copilot</h4>
+        <p>A voice assistant with AI-powered responses using Groq API.</p>
+        <a href="https://www.youtube.com/your-demo-video-link" target="_blank" class="btn-demo">Video Demo</a>
+        <a href="https://github.com/udhav996/ComputerCopilot" target="_blank" class="btn-github">GitHub Code</a>
+      </div>
+
+      <!-- ✅ DocsGenerator Project -->
+      <div class="project-card">
+        <span class="badge-new">NEW 🚀</span>
+        <img src="doc_generator_home.jpg" alt="Docs Generator">
+        <h4>Docs Generator</h4>
+        <p>A Python-based tool to generate ID cards, Transfer Certificates, and more with GUI.</p>
+        <a href="https://www.youtube.com/your-docs-generator-demo" target="_blank" class="btn-demo">Video Demo</a>
+        <a href="https://github.com/udhav996/DocsGenerator" target="_blank" class="btn-github">GitHub Code</a>
+      </div>
+
+      <!-- 📚 Library Management System Project -->
+      <div class="project-card">
+        <img src="library_home.jpg" alt="Library Management System">
+        <h4>Library Management System</h4>
+        <p>A Python project to manage books, students, issuing, and returning of books with reports.</p>
+                <a href="https://www.youtube.com/Liabrary_management_system-demo" target="_blank" class="btn-demo">Video Demo</a>
+        <a href="https://github.com/udhav996/Liabrary_management_system" target="_blank" class="btn-github">GitHub Code</a>
+        
+      </div>
+    </div>
+
   </section>
 </body>
 </html>
-
-
-
-
